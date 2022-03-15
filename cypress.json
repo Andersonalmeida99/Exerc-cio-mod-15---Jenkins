@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://localhost:3000/",
+    "baseUrl": "https://serverest.dev/",
     "reporter": "mochawesome",
     "reporterOptions": {
         "reportDir": "mochawesome-report",
