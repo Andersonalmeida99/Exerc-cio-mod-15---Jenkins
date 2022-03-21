@@ -13,7 +13,7 @@ describe('Testes da Funcionalidade Produtos', () => {
         })
     });
 
-    it('Deve listar os produtos cadastrados', () => {
+    it.only('Deve listar os produtos cadastrados', () => {
         cy.request({
             method: 'GET',
             url: 'produtos'
@@ -21,7 +21,7 @@ describe('Testes da Funcionalidade Produtos', () => {
             //expect(response.body.produtos[9].nome).to.equal('Produto EBAC 436746')
             expect(response.status).to.equal(200)
             expect(response.body).to.have.property('produtos')
-            expect(response.duration).to.be.lessThan(20)
+            expect(response.duration).to.be.lessThan(32)
         })
     });
 
