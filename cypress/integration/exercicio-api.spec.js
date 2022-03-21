@@ -4,7 +4,7 @@ import contrato from '../contracts/usuarios.contract'
 describe('Testes da Funcionalidade Usuários', () => {
      let token
      before(() => {
-          cy.token('anderson30.qa@gmail.com', 'teste').then(tkn => { token = tkn })
+          cy.token('fulano@qa.com', 'teste').then(tkn => { token = tkn })
      });
 
      it('Deve validar contrato de usuários', () => {
@@ -40,7 +40,7 @@ describe('Testes da Funcionalidade Usuários', () => {
 
 
      it('Deve validar um usuário com email inválido', () => {
-          cy.cadastrarUsuario("Miranda", "mirandaqa@gmail.com", "testi", "false")
+          cy.cadastrarUsuario("Miranda","mirandaqa@testi.com", "testi", "false")
                .then((response) => {
                     expect(response.status).to.equal(400)
                     expect(response.body.message).to.equal('Este email já está sendo usado')
